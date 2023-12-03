@@ -14,7 +14,7 @@ final class LoginPresenter: LoginPresentationLogic {
     weak var viewController: LoginDisplayLogic?
     
     func presentUser(user: BackEndUserModel) {
-        viewController?.displayUser()
+        viewController?.displayUser(user: user)
     }
     
     func userNotFound() {

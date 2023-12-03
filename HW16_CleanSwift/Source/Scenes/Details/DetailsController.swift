@@ -6,11 +6,32 @@
 //
 
 import UIKit
-
+protocol DetailsDisplayLogic: AnyObject {
+    func displayUser(user: userModel)
+}
 final class DetailsController: UIViewController {
+    
+    var router: (DetailsRoutingLogic & DetailsDataPassingProtocol)?
+    var interactor: (DetailsBusinessLogic & DetailsStoreProtocol)?
+    var detailsView = DetailsView()
+    
+    override func loadView() {
+        view = detailsView
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "DwetailsView"
-        view.backgroundColor = .blue
+        interactor?.fetchDetails()
+        setupUI()
+    }
+    
+    private func setupUI() {
+        view.backgroundColor = .systemBackground
+    }
+}
+
+extension DetailsController: DetailsDisplayLogic {
+    func displayUser(user: userModel) {
+        detailsView.configureDetailsView(user: user)
     }
 }

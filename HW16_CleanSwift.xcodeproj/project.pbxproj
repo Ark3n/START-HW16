@@ -20,6 +20,12 @@
 		D8ED32C32B1CD5B300CAA00F /* LoginConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8ED32C22B1CD5B300CAA00F /* LoginConfigurator.swift */; };
 		D8ED32C62B1CDC2B00CAA00F /* BackEndUserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8ED32C52B1CDC2B00CAA00F /* BackEndUserModel.swift */; };
 		D8ED32CA2B1CE5D200CAA00F /* DetailsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8ED32C92B1CE5D200CAA00F /* DetailsController.swift */; };
+		D8ED32CC2B1CEC3400CAA00F /* LoginRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8ED32CB2B1CEC3400CAA00F /* LoginRouter.swift */; };
+		D8ED32CE2B1CF09B00CAA00F /* DetailsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8ED32CD2B1CF09B00CAA00F /* DetailsInteractor.swift */; };
+		D8ED32D02B1CF0C300CAA00F /* DetailsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8ED32CF2B1CF0C300CAA00F /* DetailsRouter.swift */; };
+		D8ED32D22B1CF76E00CAA00F /* DetailsConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8ED32D12B1CF76E00CAA00F /* DetailsConfigurator.swift */; };
+		D8ED32D42B1CFEFC00CAA00F /* DetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8ED32D32B1CFEFC00CAA00F /* DetailsView.swift */; };
+		D8ED32D62B1D02F200CAA00F /* DetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8ED32D52B1D02F200CAA00F /* DetailsPresenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +43,12 @@
 		D8ED32C22B1CD5B300CAA00F /* LoginConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginConfigurator.swift; sourceTree = "<group>"; };
 		D8ED32C52B1CDC2B00CAA00F /* BackEndUserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackEndUserModel.swift; sourceTree = "<group>"; };
 		D8ED32C92B1CE5D200CAA00F /* DetailsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsController.swift; sourceTree = "<group>"; };
+		D8ED32CB2B1CEC3400CAA00F /* LoginRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRouter.swift; sourceTree = "<group>"; };
+		D8ED32CD2B1CF09B00CAA00F /* DetailsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsInteractor.swift; sourceTree = "<group>"; };
+		D8ED32CF2B1CF0C300CAA00F /* DetailsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsRouter.swift; sourceTree = "<group>"; };
+		D8ED32D12B1CF76E00CAA00F /* DetailsConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsConfigurator.swift; sourceTree = "<group>"; };
+		D8ED32D32B1CFEFC00CAA00F /* DetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsView.swift; sourceTree = "<group>"; };
+		D8ED32D52B1D02F200CAA00F /* DetailsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsPresenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +120,7 @@
 		D8ED32B42B1CAA5D00CAA00F /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				D8ED32C02B1CB7D900CAA00F /* LocalUserModel.swift */,
 				D8ED32C72B1CE59E00CAA00F /* Login */,
 				D8ED32C82B1CE5AD00CAA00F /* Details */,
 			);
@@ -129,8 +142,8 @@
 				D8ED32A02B1CA98900CAA00F /* LoginViewController.swift */,
 				D8ED32B72B1CAC7800CAA00F /* LoginInteractor.swift */,
 				D8ED32B52B1CAC6B00CAA00F /* LoginPresenter.swift */,
-				D8ED32C02B1CB7D900CAA00F /* LocalUserModel.swift */,
 				D8ED32C22B1CD5B300CAA00F /* LoginConfigurator.swift */,
+				D8ED32CB2B1CEC3400CAA00F /* LoginRouter.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -138,7 +151,12 @@
 		D8ED32C82B1CE5AD00CAA00F /* Details */ = {
 			isa = PBXGroup;
 			children = (
+				D8ED32D32B1CFEFC00CAA00F /* DetailsView.swift */,
 				D8ED32C92B1CE5D200CAA00F /* DetailsController.swift */,
+				D8ED32CD2B1CF09B00CAA00F /* DetailsInteractor.swift */,
+				D8ED32CF2B1CF0C300CAA00F /* DetailsRouter.swift */,
+				D8ED32D12B1CF76E00CAA00F /* DetailsConfigurator.swift */,
+				D8ED32D52B1D02F200CAA00F /* DetailsPresenter.swift */,
 			);
 			path = Details;
 			sourceTree = "<group>";
@@ -224,11 +242,17 @@
 				D8ED32CA2B1CE5D200CAA00F /* DetailsController.swift in Sources */,
 				D8ED32C12B1CB7D900CAA00F /* LocalUserModel.swift in Sources */,
 				D8ED32B62B1CAC6B00CAA00F /* LoginPresenter.swift in Sources */,
+				D8ED32D22B1CF76E00CAA00F /* DetailsConfigurator.swift in Sources */,
+				D8ED32D02B1CF0C300CAA00F /* DetailsRouter.swift in Sources */,
 				D8ED32A12B1CA98900CAA00F /* LoginViewController.swift in Sources */,
 				D8ED329D2B1CA98900CAA00F /* AppDelegate.swift in Sources */,
+				D8ED32CE2B1CF09B00CAA00F /* DetailsInteractor.swift in Sources */,
 				D8ED32B82B1CAC7800CAA00F /* LoginInteractor.swift in Sources */,
+				D8ED32D42B1CFEFC00CAA00F /* DetailsView.swift in Sources */,
+				D8ED32CC2B1CEC3400CAA00F /* LoginRouter.swift in Sources */,
 				D8ED32C32B1CD5B300CAA00F /* LoginConfigurator.swift in Sources */,
 				D8ED329F2B1CA98900CAA00F /* SceneDelegate.swift in Sources */,
+				D8ED32D62B1D02F200CAA00F /* DetailsPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

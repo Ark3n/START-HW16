@@ -11,9 +11,12 @@ final class LoginConfigurator {
     static func configure(viewController: LoginViewController) -> LoginViewController {
         let interactor = LoginInteractor()
         let presenter = LoginPresenter()
+        let router = LoginRouter()
+        router.viewController = viewController
         presenter.viewController = viewController
         interactor.presenter = presenter
         viewController.interactor = interactor
+        viewController.router = router
         return viewController
     }
 }
