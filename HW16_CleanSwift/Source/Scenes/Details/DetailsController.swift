@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  DetailsController.swift
 //  HW16_CleanSwift
 //
 //  Created by Arken Sarsenov on 03.12.2023.
@@ -7,13 +7,10 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-
+final class DetailsController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .red
+        title = "DwetailsView"
+        view.backgroundColor = .blue
     }
-
-
 }
-
