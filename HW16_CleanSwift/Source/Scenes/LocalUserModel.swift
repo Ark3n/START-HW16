@@ -17,4 +17,6 @@ struct LocalUserModel {
 struct userModel {
     let firstname: String
     let secondname: String
+    let email: String
+    let number: String
 }

@@ -25,6 +25,9 @@ class DetailsInteractor: DetailsBusinessLogic, DetailsStoreProtocol {
                                                   phone: 0)
     
     func fetchDetails() {
-        presenter?.presentUser(user: userModel(firstname: user.name, secondname: user.secondname))
+        presenter?.presentUser(user: userModel(firstname: user.name,
+                                               secondname: user.secondname,
+                                               email: user.mail,
+                                               number: String(user.phone)))
     }
 }

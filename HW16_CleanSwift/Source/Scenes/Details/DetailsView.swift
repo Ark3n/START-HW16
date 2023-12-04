@@ -21,6 +21,15 @@ final class DetailsView: UIView {
         return label
     }()
     
+    private lazy var emailLabel: UILabel = {
+        let label = UILabel()
+        return label
+    }()
+    
+    private lazy var phoneLabel: UILabel = {
+        let label = UILabel()
+        return label
+    }()
     
     // MARK: - View Lifecycle
     override init(frame: CGRect) {
@@ -34,9 +43,10 @@ final class DetailsView: UIView {
     
     // MARK: - SetupUI
     private func setupUI() {
-        let stackView = UIStackView(arrangedSubviews: [nameLabel, secondNameLabel])
+        let stackView = UIStackView(arrangedSubviews: [nameLabel, secondNameLabel, emailLabel, phoneLabel])
         stackView.axis = .vertical
-        stackView.spacing = 10
+        stackView.alignment = .leading
+        stackView.distribution = .equalSpacing
         addSubview(stackView)
         stackView.snp.makeConstraints { make in
             make.center.equalToSuperview()
@@ -45,7 +55,9 @@ final class DetailsView: UIView {
     }
     
     func configureDetailsView(user: userModel) {
-        nameLabel.text = user.firstname
-        secondNameLabel.text = user.secondname
+        nameLabel.text = "First name: \(user.firstname)"
+        secondNameLabel.text = "Second name: \(user.secondname)"
+        emailLabel.text = "Email: \(user.email)"
+        phoneLabel.text = "Phone: \(user.number)"
     }
 }

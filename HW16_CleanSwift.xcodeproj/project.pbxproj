@@ -154,9 +154,9 @@
 				D8ED32D32B1CFEFC00CAA00F /* DetailsView.swift */,
 				D8ED32C92B1CE5D200CAA00F /* DetailsController.swift */,
 				D8ED32CD2B1CF09B00CAA00F /* DetailsInteractor.swift */,
+				D8ED32D52B1D02F200CAA00F /* DetailsPresenter.swift */,
 				D8ED32CF2B1CF0C300CAA00F /* DetailsRouter.swift */,
 				D8ED32D12B1CF76E00CAA00F /* DetailsConfigurator.swift */,
-				D8ED32D52B1D02F200CAA00F /* DetailsPresenter.swift */,
 			);
 			path = Details;
 			sourceTree = "<group>";
