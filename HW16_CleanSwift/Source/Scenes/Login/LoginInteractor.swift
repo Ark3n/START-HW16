@@ -14,14 +14,13 @@ final class LoginInteractor: LoginBusinessLogic {
     
     func fetchUser(user: LocalUserModel) {
         let usersInDataBase = BackEndUsersGroup.users
+        var result: BackEndUserModel?
         for item in usersInDataBase {
             if item.user == user.username && item.password == user.password {
-                presenter?.presentUser(user: item)
-                break
-            }
-            else {
-                presenter?.userNotFound()
+                result = item
             }
         }
+        presenter?.presentUser(user: result)
     }
 }
+

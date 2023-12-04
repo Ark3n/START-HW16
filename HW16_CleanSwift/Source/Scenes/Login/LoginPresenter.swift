@@ -6,18 +6,13 @@
 //
 
 protocol LoginPresentationLogic: AnyObject {
-    func presentUser(user: BackEndUserModel)
-    func userNotFound()
+    func presentUser(user: BackEndUserModel?)
 }
 
 final class LoginPresenter: LoginPresentationLogic {
     weak var viewController: LoginDisplayLogic?
-    
-    func presentUser(user: BackEndUserModel) {
+    func presentUser(user: BackEndUserModel?) {
         viewController?.displayUser(user: user)
     }
-    
-    func userNotFound() {
-        viewController?.userNotFound()
-    }
 }
+

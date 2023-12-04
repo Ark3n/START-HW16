@@ -8,8 +8,7 @@
 import UIKit
 
 protocol LoginDisplayLogic: AnyObject {
-    func displayUser(user: BackEndUserModel)
-    func userNotFound()
+    func displayUser(user: BackEndUserModel?)
 }
 final class LoginViewController: UIViewController {
     // MARK: - properties
@@ -40,13 +39,17 @@ extension LoginViewController: LoginViewDelegate {
 }
 
 extension LoginViewController: LoginDisplayLogic {
-    func displayUser(user: BackEndUserModel) {
-        router?.navigateToDeatailsVC(user: user)
-    }
-    func userNotFound() {
-        let alertController = UIAlertController(title: "Login Failed", message: "Username or password incorrect", preferredStyle: .alert)
-        let okButton = UIAlertAction(title: "OK", style: .default)
-        alertController.addAction(okButton)
-        self.navigationController?.present(alertController, animated: true)
+    func displayUser(user: BackEndUserModel?) {
+        if let result = user {
+            router?.navigateToDeatailsVC(user: result)
+        } else {
+            let alertController = UIAlertController(title: "Login Failed", message: "Username or password incorrect", preferredStyle: .alert)
+            let okButton = UIAlertAction(title: "OK", style: .default)
+            alertController.addAction(okButton)
+            self.navigationController?.present(alertController, animated: true)
+        }
     }
 }
+
+
+
