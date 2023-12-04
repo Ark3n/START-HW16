@@ -10,23 +10,24 @@ protocol DetailsDisplayLogic: AnyObject {
     func displayUser(user: userModel)
 }
 final class DetailsController: UIViewController {
-    
+    // MARK: - Properties
     var router: (DetailsRoutingLogic & DetailsDataPassingProtocol)?
     var interactor: (DetailsBusinessLogic & DetailsStoreProtocol)?
     var detailsView = DetailsView()
     
+    // MARK: - ViewLifecycle
     override func loadView() {
         view = detailsView
     }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        interactor?.fetchDetails()
         setupUI()
     }
     
+    // MARK: SetupUI
     private func setupUI() {
         view.backgroundColor = .systemBackground
+        interactor?.fetchDetails()
     }
 }
 
